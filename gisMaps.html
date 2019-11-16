@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Profile Site">
+        <meta name="author" content="Dylan Hemsworth">
+        <title>Dylan Hemsworth Profile</title>
+        <!-- Scripts and CSS -->
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!-- Lato Font -->
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Materialize CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Materialize -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- Vue Dev -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- Vue Prod -->
+        <!-- script src="https://cdn.jsdelivr.net/npm/vue"></script -->
+        <!-- MapGal css/js -->
+        <link rel="stylesheet" href="css/mapgal.css">
+        <script src="js/mapgal.js"></script>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <header-item></header-item>
+            </header>
+            <main>
+                <map-item v-for="map in gismaps"
+                            v-bind:map="map"
+                            v-bind:key="map.pic">
+                </map-item>
+            </main>
+            <footer>
+            </footer>
+        </div>
+    </body>
+</html>
